@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yilmaz Sürmeli (Yilmaz Koshua) — Portfolio für Studios, Retreat-Zentren & Communities</title>
+<meta name="description" content="Yilmaz Sürmeli, künstlerisch bekannt als Yilmaz Koshua. Faszien- & Trauma-Release-Körperarbeit, Kakao- & Klangzeremonien, Live-Konzerte — unterwegs im eigenen Van durch die ganze Schweiz, ab 1. November für 3–6 Monate.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%2336391F' stroke-width='2.2'%3E%3Ccircle cx='14' cy='15' r='10'/%3E%3Ccircle cx='26' cy='15' r='10'/%3E%3Ccircle cx='20' cy='24' r='10'/%3E%3Ccircle cx='20' cy='18' r='2' fill='%2336391F' stroke='none'/%3E%3C/svg%3E">
+
+<style>
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic; font-weight: 300; font-display: swap;
+    src: url('fonts/cormorant-garamond-300-italic.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url('fonts/cormorant-garamond-300-normal.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url('fonts/inter-300-normal.woff2') format('woff2');
+  }
+
+  :root {
+    --olive:       #36391F;
+    --olive-soft:  #5C5E3F;
+    --sand:        #E3D7C8;
+    --sand-light:  #EDE4DA;
+    --cream:       #F5EFE6;
+    --line: rgba(54,57,31,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--olive);
+    background: var(--sand-light);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0.01em; line-height: 1.2; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin-bottom: 1rem; }
+  h3 { font-size: clamp(1.1rem, 2.3vw, 1.4rem); margin-bottom: 0.5rem; }
+  p { margin-bottom: 1rem; max-width: 60ch; }
+  a { color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--line); transition: border-color 0.2s; }
+  a:hover { border-color: var(--olive); }
+  .container { max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(237,228,218,0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nav-brand { font-weight: 600; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; border: none; color: var(--olive); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { font-size: 0.78rem; color: var(--olive-soft); letter-spacing: 0.06em; border: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--olive); }
+
+  .btn {
+    display: inline-block; padding: 0.85rem 1.6rem;
+    border-radius: 999px; font-weight: 500; font-size: 0.95rem;
+    border: 1px solid var(--olive); text-decoration: none;
+    transition: all 0.2s; cursor: pointer; font-family: 'Inter', sans-serif;
+  }
+  .btn-primary { background: var(--olive); color: var(--cream); }
+  .btn-primary:hover { background: var(--olive-soft); border-color: var(--olive-soft); }
+  .btn-secondary { background: transparent; color: var(--olive); }
+  .btn-secondary:hover { background: var(--olive); color: var(--cream); }
+
+  section { padding: 4.5rem 0; }
+  section:nth-of-type(even) { background: var(--sand); }
+  .section-eyebrow {
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem;
+    color: var(--olive-soft); margin-bottom: 0.5rem; font-weight: 500;
+  }
+
+  /* HERO */
+  .hero { background: var(--sand); padding: 3.5rem 0 4rem; }
+  .hero-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items: center; }
+  .hero-portrait { width: 100%; border-radius: 4px; display: block; box-shadow: 0 8px 30px rgba(54,57,31,0.15); }
+  .hero-eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.78rem; color: var(--olive-soft); margin-bottom: 0.75rem; font-weight: 500; }
+  .hero-name { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.03em; color: var(--olive-soft); margin-top: 0.6rem; }
+  .hero-tagline { font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--olive-soft); margin-top: 0.5rem; max-width: 46ch; }
+  .hero-aloha { font-style: italic; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--olive); margin-top: 1.1rem; line-height: 1; }
+  .hero-pitch { color: var(--olive-soft); margin-top: 0.9rem; max-width: 58ch; }
+  .hero-pitch:first-of-type { margin-top: 0.6rem; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+
+  /* PILLARS (3 gleichwertig) */
+  .trinity { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 2rem; margin-top: 2.5rem; }
+  .pillar { background: var(--sand-light); padding: 2rem; border-radius: 4px; border: 1px solid var(--line); }
+  .pillar-icon { margin-bottom: 1.1rem; display: block; }
+  section:nth-of-type(even) .pillar { background: var(--cream); }
+
+  /* OFFER-META style label */
+  .meta-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--olive-soft); margin-bottom: 0.5rem; font-weight: 500; }
+
+  /* GALLERY */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .gallery-item { aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 18px rgba(54,57,31,0.12); background: var(--sand); position: relative; }
+  .gallery-item a { display: block; width: 100%; height: 100%; border: none; }
+  .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+  .gallery-item a:hover img { transform: scale(1.04); }
+  .gallery-caption { margin: 2rem auto 0; text-align: center; color: var(--olive-soft); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; max-width: 60ch; }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 1000;
+    background: rgba(29,30,16,0.92); padding: 4rem 1.5rem;
+    align-items: center; justify-content: center;
+  }
+  .lightbox.is-open { display: flex; }
+  .lightbox-figure { max-width: min(90vw, 900px); max-height: 84vh; text-align: center; }
+  .lightbox-figure img { max-width: 100%; max-height: 84vh; width: auto; height: auto; display: block; margin: 0 auto; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+  .lightbox-caption { color: var(--cream); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; margin-top: 1rem; }
+  .lightbox-close, .lightbox-prev, .lightbox-next {
+    position: fixed; background: transparent; border: none; color: var(--cream);
+    cursor: pointer; font-family: 'Inter', sans-serif; line-height: 1;
+  }
+  .lightbox-close { top: 1.5rem; right: 1.5rem; font-size: 2rem; padding: 0.5rem; }
+  .lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); font-size: 2.2rem; padding: 0.5rem 1rem; opacity: 0.75; }
+  .lightbox-prev:hover, .lightbox-next:hover, .lightbox-close:hover { opacity: 1; }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+  @media (max-width: 600px) {
+    .lightbox-prev, .lightbox-next { font-size: 1.6rem; padding: 0.4rem 0.7rem; }
+  }
+
+  /* CERTIFICATES */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px,1fr)); gap: 1rem; margin-top: 2rem; }
+  .cert-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; border: none; }
+  .cert-item img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: var(--cream); border: 1px solid var(--line); border-radius: 4px; transition: transform 0.2s; }
+  .cert-item:hover img { transform: scale(1.04); }
+  .cert-item span { font-size: 0.75rem; color: var(--olive-soft); text-align: center; }
+
+  /* SOUNDCLOUD */
+  .soundcloud-embed { border-radius: 4px; overflow: hidden; box-shadow: 0 4px 18px rgba(54,57,31,0.12); max-width: 400px; }
+  .soundcloud-embed iframe { display: block; border: none; }
+
+  /* VIDEO LIST */
+  .video-block { margin-top: 2.5rem; }
+  .video-block:first-of-type { margin-top: 0; }
+  .video-frame-wrap { border-radius: 4px; overflow: hidden; box-shadow: 0 4px 18px rgba(54,57,31,0.12); max-width: 250px; margin: 0 auto; }
+  .video-frame-wrap video { width: 100%; height: auto; display: block; }
+
+  /* SPLIT LAYOUT (abwechselnd Text/Medien) */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem; }
+  .split.split-top { align-items: start; }
+  .split .split-text p:last-child { margin-bottom: 0; }
+  .split-photo { position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 28px rgba(54,57,31,0.15); aspect-ratio: 4/5; }
+  .split-photo.landscape { aspect-ratio: 4/3; }
+  .split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .split-photo a { display: block; width: 100%; height: 100%; border: none; }
+  .play-button {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(245,239,230,0.92); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3); pointer-events: none; transition: transform 0.2s, background 0.2s;
+  }
+  .split-photo a:hover .play-button { transform: translate(-50%,-50%) scale(1.08); background: var(--cream); }
+  .play-button svg { margin-left: 4px; }
+  .split-media-inline { display: flex; justify-content: center; }
+  @media (max-width: 768px) {
+    .split { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+
+  /* AVAILABILITY BOX */
+  .avail-box {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; margin-top: 2rem;
+    padding: 1.75rem; border: 1px solid var(--line); border-radius: 4px; background: var(--cream);
+    text-align: center;
+  }
+  section:nth-of-type(even) .avail-box { background: var(--sand-light); }
+  .avail-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--olive-soft); margin-bottom: 0.3rem; }
+  .avail-item .value { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
+
+  .contact-block { text-align: center; }
+  #kontakt .section-eyebrow, #kontakt h2, #kontakt > .container > p { text-align: center; }
+  #kontakt p { margin-left: auto; margin-right: auto; }
+
+  footer { padding: 2.5rem 0; text-align: center; color: var(--olive-soft); font-size: 0.85rem; border-top: 1px solid var(--line); }
+  footer a { border: none; }
+  footer p { margin-left: auto; margin-right: auto; }
+  .footer-links { margin-top: 0.5rem; }
+
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-portrait { max-width: 320px; margin: 0 auto; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 3.5rem 0; }
+    .pillar { padding: 1.5rem; }
+    .avail-box { grid-template-columns: 1fr; gap: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="#" class="nav-brand">YILMAZ SÜRMELI · PORTFOLIO</a>
+  <ul class="nav-links">
+    <li><a href="#angebot">Angebot</a></li>
+    <li><a href="#einsatz">Einsatzbereiche</a></li>
+    <li><a href="#impressionen">Impressionen</a></li>
+    <li><a href="#musik">Musik</a></li>
+    <li><a href="#van">Mein Van</a></li>
+    <li><a href="#ausbildung">Ausbildung</a></li>
+    <li><a href="#video">Videos</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+    <img class="hero-portrait" src="img/portrait.jpg" alt="Yilmaz Sürmeli (Yilmaz Koshua)">
+    <div>
+      <p class="hero-eyebrow">Für Retreat-Zentren, Communities, Studios &amp; Wellness-Hotels — ganze Schweiz</p>
+      <p class="hero-aloha">Aloha, wundervoll, dass du hier bist</p>
+      <p class="hero-pitch">Ich bin Yilmaz Sürmeli und ich freue mich, diesen Winter in der Schweiz einen passenden Platz einzunehmen und mit dem, was ich mitbringe, zu wirken.</p>
+      <p class="hero-pitch">Körperarbeit steht bei mir im Vordergrund, in Form von faszialen Behandlungsmethoden. Geistesausgleich durch Atemübungen und Meditation. Seelenreisen durch den Klang meiner Stimme, in Begleitung von Instrumenten &amp; Kakao.</p>
+      <p class="hero-pitch">Ab dem 1. November bin ich startbereit, an einem Ort zu wirken, der mich bei sich möchte. Ich bringe vielseitige Qualifikationen mit und bin bereit, flexibel zu arbeiten.</p>
+      <p class="hero-pitch">Interessiert bin ich an einer Festanstellung zwischen 3 und 6 Monaten. Ich reise im Van und bringe meine Unterkunft gleich mit.</p>
+      <div class="cta-row">
+        <a href="#" onclick="kontakt('Anfrage Zusammenarbeit');return false;" class="btn btn-primary">Zusammenarbeit anfragen</a>
+        <a href="#video" class="btn btn-secondary">Video ansehen</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ÜBER MICH -->
+<section id="ueber-mich">
+  <div class="container split">
+    <div class="split-text">
+      <p class="section-eyebrow">Kurz zu mir</p>
+      <h2>Über mich</h2>
+      <p>Ich bin Yilmaz Sürmeli — unter dem Namen Yilmaz Koshua mache ich seit Jahren Musik, arbeite als Faszien-Coach und habe mich auf Kakao-Zeremonien spezialisiert. Dreizehn Jahre habe ich als Musiker in Berlin gelebt, danach drei Jahre als Reisender aus dem Van — Wohnzimmerkonzerte, Festivals, spirituelle Kreise. Zwei Jahre habe ich bei Yoga &amp; More in Berlin Körperarbeit, Beratung und Verkauf verantwortet.</p>
+      <p>Ab 1. November bin ich für 3–6 Monate in der Schweiz unterwegs — wieder im Van, diesmal auf der Suche nach einem Ort, an dem ich mitarbeiten und eine Weile bleiben kann.</p>
+      <p>Mehr zu meinem persönlichen Weg: <a href="https://yilmazkoshua.de" target="_blank" rel="noopener">yilmazkoshua.de</a> · Musik &amp; Konzerte: <a href="https://musik.yilmazkoshua.de" target="_blank" rel="noopener">musik.yilmazkoshua.de</a></p>
+    </div>
+    <div class="split-photo"><img src="img/retreat/retreat-1.jpg" alt="Yilmaz auf der Bühne, erklärt etwas der Gruppe"></div>
+  </div>
+</section>
+
+<!-- ANGEBOT -->
+<section id="angebot">
+  <div class="container">
+    <p class="section-eyebrow">Was ich mitbringe</p>
+    <h2>Angebot</h2>
+    <p>Drei gleichwertige Bereiche — einzeln buchbar oder kombiniert, ganz wie es zu eurem Haus passt:</p>
+    <div class="trinity">
+      <div class="pillar">
+        <svg class="pillar-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="#36391F" stroke-width="1.8" stroke-linecap="round"><path d="M6 14c4-6 10-6 14 0s10 6 14 0"/><path d="M6 22c4-6 10-6 14 0s10 6 14 0"/><path d="M6 30c4-6 10-6 14 0s10 6 14 0"/></svg>
+        <h3>Faszien &amp; Körperarbeit</h3>
+        <p>Ausgebildeter Massagetherapeut, spezialisiert auf Nackenmassagen sowie Akupressur — mein Schwerpunkt liegt heute auf der Faszientherapie nach der Human-Garage-Methode und 1:1 Trauma-Release-Körperarbeit. Als eigener Kurs auf der Trainingsfläche oder als Ergänzung zu einem bestehenden Yoga-/Fitnessangebot.</p>
+      </div>
+      <div class="pillar" style="text-align:center;">
+        <svg class="pillar-icon" style="margin-left:auto;margin-right:auto;" width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="#36391F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="15" width="6" height="10" rx="1.5"/><rect x="28" y="15" width="6" height="10" rx="1.5"/><line x1="12" y1="20" x2="28" y2="20"/></svg>
+        <h3>Körper &amp; Fitness</h3>
+        <p>Als Personal Trainer und Fitnesstrainer bringe ich die Kompetenz mit, auf der Trainingsfläche zu begleiten oder eigene Kursangebote zu entwickeln und zu leiten. Selbst trainiere ich vor allem mit dem eigenen Körpergewicht und biete darüber hinaus Yoga, Tai Chi sowie Qi Gong an — für Kraft, Balance und Beweglichkeit gleichermaßen.</p>
+      </div>
+      <div class="pillar" style="text-align:right;">
+        <svg class="pillar-icon" style="margin-left:auto;" width="32" height="32" viewBox="0 0 40 40" fill="none" stroke="#36391F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="30" r="4"/><circle cx="26" cy="27" r="4"/><path d="M16 30V10l14-3v17"/></svg>
+        <h3>Kakao, Klang &amp; Konzerte</h3>
+        <p>Geführte Kakao-Rituale mit Live-Musik und Stille — bei mir gehört das eine nie ohne das andere. Mein zeremonielles Kakao (als Kakao-Botschafter für Mayamunay) bringe ich selbst mit, ihr müsst also nichts besorgen. Dazu eigenständige Konzertabende und Klangreisen — ein besonderes Highlight für Gäste, auch losgelöst vom Kakao-Ritual buchbar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EINSATZBEREICHE -->
+<section id="einsatz">
+  <div class="container split">
+    <div class="split-photo"><img src="img/retreat/retreat-8.jpg" alt="Yilmaz auf der Bühne, leitet die Gruppe mit Mikro an"></div>
+    <div class="split-text">
+      <p class="section-eyebrow">Wo ich am liebsten arbeite</p>
+      <h2>Einsatzbereiche</h2>
+      <p>Am liebsten auf der Kurs- oder Trainingsfläche: Faszien-Übungen nach der Human-Garage-Methode, dazu Meditation, Pranayama, Hatha-Yoga und Personal Training.</p>
+      <p>Gerne unterstütze ich auch am Empfang. Klassische Massage biete ich nicht als Haupttätigkeit an — ich komme aus der traumasensiblen Körperarbeit und möchte nicht mehrere Stunden am Tag massieren. Falls das für euer Haus trotzdem interessant ist, lässt sich das im Gespräch dazunehmen.</p>
+      <p>Zusätzliche Erfahrung: 9 Monate als Saunameister/Aufgießer im Balneon (Bad Neustadt) — auf Wunsch gerne mit im Angebot.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMPRESSIONEN -->
+<section id="impressionen">
+  <div class="container">
+    <p class="section-eyebrow">Live vor Ort</p>
+    <h2>Impressionen</h2>
+    <p>Von einem Retreat, bei dem ich eine Faszien- &amp; Bewegungssession für eine größere Gruppe angeleitet habe — draußen, mit Live-Anleitung und Mikro.</p>
+    <div class="gallery">
+      <div class="gallery-item"><a href="img/retreat/retreat-4.jpg" class="lightbox-link" target="_blank" rel="noopener"><img src="img/retreat/retreat-4.jpg" alt="Große Gruppe bei einer Dehnübung, Yilmaz auf der Bühne im Hintergrund"></a></div>
+      <div class="gallery-item"><video src="img/retreat/retreat-clip.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="gallery-item"><a href="img/retreat/retreat-2.jpg" class="lightbox-link" target="_blank" rel="noopener"><img src="img/retreat/retreat-2.jpg" alt="Yilmaz mit erhobenen Armen vor der Gruppe"></a></div>
+      <div class="gallery-item"><a href="img/retreat/retreat-6.jpg" class="lightbox-link" target="_blank" rel="noopener"><img src="img/retreat/retreat-6.jpg" alt="Yilmaz leitet eine Dehnübung mit der Gruppe an"></a></div>
+      <div class="gallery-item"><a href="img/retreat/retreat-9.jpg" class="lightbox-link" target="_blank" rel="noopener"><img src="img/retreat/retreat-9.jpg" alt="Geführte Umarmungs-Übung mit der Gruppe"></a></div>
+      <div class="gallery-item"><a href="img/retreat/retreat-7.jpg" class="lightbox-link" target="_blank" rel="noopener"><img src="img/retreat/retreat-7.jpg" alt="Gruppe bei einer Partner-Zugübung, Yilmaz leitet mit an"></a></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Schließen">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Vorheriges Bild">&#8249;</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-next" aria-label="Nächstes Bild">&#8250;</button>
+  </div>
+</section>
+
+<!-- MUSIK -->
+<section id="musik">
+  <div class="container split">
+    <div class="split-text">
+      <p class="section-eyebrow">Zum Reinhören</p>
+      <h2>Musik</h2>
+      <p>Ich schreibe und spiele seit über zwanzig Jahren eigene Lieder — Stimme, Gitarre, Kanun. Hier meine ganze Sammlung direkt zum Anhören:</p>
+      <div class="soundcloud-embed">
+        <iframe width="100%" height="358" scrolling="no" frameborder="no" allow="autoplay; encrypted-media"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1964281012&color=%23d0b7a1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          title="Yilmaz Koshua – All My Songs auf SoundCloud"></iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/yilmaz-koshua" title="YILMAZ KOSHUA" target="_blank" rel="noopener" style="color: #cccccc; text-decoration: none;">YILMAZ KOSHUA</a> · <a href="https://soundcloud.com/yilmaz-koshua/sets/all-my-songs" title="ALL MY SONGS" target="_blank" rel="noopener" style="color: #cccccc; text-decoration: none;">ALL MY SONGS</a></div>
+      </div>
+      <p style="margin-top:1.5rem;">Mehr Musik, Konzerte &amp; Booking-Anfragen: <a href="https://musik.yilmazkoshua.de" target="_blank" rel="noopener">musik.yilmazkoshua.de</a></p>
+    </div>
+    <div class="split-photo"><img src="img/retreat/musik-solo.jpg" alt="Yilmaz spielt Gitarre und singt"></div>
+  </div>
+</section>
+
+<!-- MEIN VAN -->
+<section id="van">
+  <div class="container split">
+    <div class="split-photo"><img src="img/retreat/van-coco.jpg" alt="Coco schaut aus dem Fenster meines Vans"></div>
+    <div class="split-text">
+      <p class="section-eyebrow">Ein Vorteil für euch</p>
+      <h2>Mein Van</h2>
+      <p>Ich reise und lebe in meinem eigenen, voll eingerichteten Van, komplett autark, mit eigener Strom- und Wasserversorgung. Für euch heißt das: keine Unterkunft nötig, kein Personalzimmer freizuhalten, nicht mal ein Stromanschluss. Ich brauche nur einen Stellplatz, den Rest bringe ich mit. Das Budget, das ihr sonst für eine Unterkunft einplanen würdet, kann direkt in eine faire Bezahlung fließen, das macht eine Anstellung für uns beide unkompliziert.</p>
+      <p>Dazu bin ich dadurch örtlich flexibel: Ich bin ab 1. November für 3–6 Monate in der ganzen Schweiz unterwegs, nicht auf eine einzelne Region festgelegt.</p>
+      <p>Mit an Bord ist Coco, mein Hund. Er lebt seit drei Jahren mit mir im Van und kennt ihn als sein Zuhause. Für mich bedeutet das: Struktur, Verlässlichkeit und Verantwortung gehören für mich zum Alltag, nicht nur zum Anspruch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUSBILDUNG & ERFAHRUNG -->
+<section id="ausbildung">
+  <div class="container">
+    <p class="section-eyebrow">Belastbar, nicht nur Erfahrung</p>
+    <h2>Ausbildung &amp; Erfahrung</h2>
+    <p>Faszien-Coach mit Fokus auf gezielten Faszien-Manövern und 1:1 Trauma-Release-Körperarbeit (in Ausbildung bei Human Garage), zertifizierter Personal Trainer und Entspannungstherapeut (Medical Fitness Academy Berlin, weitere Ausbildungen u.a. in Massagetherapie), dazu langjährige eigene Praxis in Hatha-Yoga. Mein größter Fokus und Anker im Herzen sind dabei Pranayama und Meditation.</p>
+    <p>Zwei Jahre Kursleitung, Beratung und Verkauf bei Yoga &amp; More in Berlin, dazu 9 Monate als Saunameister/Aufgießer im Balneon (Bad Neustadt).</p>
+
+    <div class="cert-grid">
+      <a href="img/zertifikate/zeugnis-yoga-and-more.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/zeugnis-yoga-and-more.jpg" alt="Arbeitszeugnis Yoga & More Berlin"><span>Zeugnis Yoga &amp; More</span></a>
+      <a href="img/zertifikate/personal-trainer.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/personal-trainer.jpg" alt="Zertifikat Personal Trainer"><span>Personal Trainer</span></a>
+      <a href="img/zertifikate/fitnesstrainer-a.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/fitnesstrainer-a.jpg" alt="Zertifikat Fitnesstrainer A-Lizenz"><span>Fitnesstrainer A</span></a>
+      <a href="img/zertifikate/fitnesstrainer-b.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/fitnesstrainer-b.jpg" alt="Zertifikat Fitnesstrainer B-Lizenz"><span>Fitnesstrainer B</span></a>
+      <a href="img/zertifikate/entspannungstherapeuth.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/entspannungstherapeuth.jpg" alt="Zertifikat Entspannungstherapeut"><span>Entspannungstherapeut</span></a>
+      <a href="img/zertifikate/coach-fuer-stressmanagement.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/coach-fuer-stressmanagement.jpg" alt="Zertifikat Coach für Stressmanagement"><span>Stressmanagement-Coach</span></a>
+      <a href="img/zertifikate/massagetherapeuth.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/massagetherapeuth.jpg" alt="Zertifikat Massagetherapeut"><span>Massagetherapeut</span></a>
+      <a href="img/zertifikate/spa-und-wellness-masseur.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/spa-und-wellness-masseur.jpg" alt="Zertifikat Spa- und Wellness-Masseur"><span>Spa- &amp; Wellness-Masseur</span></a>
+      <a href="img/zertifikate/ernaehrungsberater-a.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/ernaehrungsberater-a.jpg" alt="Zertifikat Ernährungsberater A-Lizenz"><span>Ernährungsberater A</span></a>
+      <a href="img/zertifikate/ernaehrungsberater-b.jpg" target="_blank" rel="noopener" class="cert-item lightbox-link"><img src="img/zertifikate/ernaehrungsberater-b.jpg" alt="Zertifikat Ernährungstrainer B-Lizenz"><span>Ernährungstrainer B</span></a>
+    </div>
+    <p class="gallery-caption">Arbeitszeugnis: Yoga &amp; More Berlin. Zertifikate: Medical Fitness Academy Berlin. Zum Vergrößern anklicken.</p>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="container">
+    <p class="section-eyebrow">Ein Einblick</p>
+    <h2>Videos</h2>
+
+    <div class="split">
+      <div class="split-text">
+        <h3>Showreel — Faszien, Kakao &amp; Konzert</h3>
+        <p>Ein kurzer Zusammenschnitt aus echten Retreats und Konzerten: Faszien-Kursleitung vor Gruppe, Kakao- &amp; Klangzeremonie und Live-Musik-Momente — die drei Bereiche, die bei mir immer zusammengehören.</p>
+        <p>Keine inszenierte Werbeaufnahme, sondern echte Situationen: wie ich eine Gruppe anleite, wie ich mit Stimme und Instrument arbeite und wie ich Präsenz und Ruhe in einen Raum bringe. Genau das würde ich auch auf eure Kursfläche oder in euer Programm mitbringen.</p>
+      </div>
+      <div class="split-media-inline">
+        <div class="video-frame-wrap">
+          <video src="img/showreel/showreel-preview.mp4" poster="img/showreel/showreel-poster.jpg" controls preload="metadata" playsinline></video>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-block split">
+      <div class="split-photo landscape">
+        <a href="https://www.youtube.com/watch?v=j-wz3zF0AfY" target="_blank" rel="noopener">
+          <img src="img/retreat/faszienkurs-thumb.jpg" alt="Standbild aus dem Faszienkurs-Video">
+          <span class="play-button" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#36391F"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="split-text" style="text-align:center;">
+        <h3>Faszienkurs — vollständige Kursstunde</h3>
+        <p>Eine vollständige Faszien-Kursstunde, live angeleitet.</p>
+        <a href="https://www.youtube.com/watch?v=j-wz3zF0AfY" target="_blank" rel="noopener" class="btn btn-secondary">Faszienkurs-Video ansehen ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERFÜGBARKEIT + KONTAKT -->
+<section id="kontakt">
+  <div class="container">
+    <p class="section-eyebrow">Verfügbarkeit</p>
+    <h2>Komm in Kontakt</h2>
+    <p>Neugierig, ob und wie das zu eurem Haus passt? Ich freue mich über ein unverbindliches Gespräch.</p>
+
+    <div class="avail-box">
+      <div class="avail-item">
+        <div class="label">Ab</div>
+        <div class="value">1. November</div>
+      </div>
+      <div class="avail-item">
+        <div class="label">Dauer</div>
+        <div class="value">ca. 3–6 Monate</div>
+      </div>
+      <div class="avail-item">
+        <div class="label">Region</div>
+        <div class="value">Ganze Schweiz</div>
+      </div>
+      <div class="avail-item">
+        <div class="label">Unterkunft</div>
+        <div class="value">Eigener Van</div>
+      </div>
+      <div class="avail-item">
+        <div class="label">Modell</div>
+        <div class="value">Festanstellung</div>
+      </div>
+    </div>
+
+    <div class="contact-block" style="margin-top:2.5rem;">
+      <a href="#" onclick="kontakt('Anfrage Zusammenarbeit');return false;" class="btn btn-primary" style="font-size:1rem;">Zusammenarbeit anfragen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 YILMAZ SÜRMELI (YILMAZ KOSHUA) · Portfolio für Retreat-Zentren, Communities, Studios &amp; Wellness-Hotels</p>
+    <p class="footer-links">
+      <a href="https://yilmazkoshua.de" target="_blank" rel="noopener">yilmazkoshua.de</a> ·
+      <a href="https://musik.yilmazkoshua.de" target="_blank" rel="noopener">musik.yilmazkoshua.de</a> ·
+      <a href="rechtliches.html#impressum">Impressum</a> · <a href="rechtliches.html#datenschutz">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var u = ['fasz', 'inier', 'end'].join('');
+    var d = ['yilmaz', 'koshua'].join('') + '.' + 'de';
+    window.kontakt = function(subject) {
+      var sub = subject ? '?subject=' + encodeURIComponent(subject) : '';
+      window.location.href = 'mai' + 'lto:' + u + '@' + d + sub;
+    };
+  })();
+
+  (function() {
+    var allLinks = Array.prototype.slice.call(document.querySelectorAll('.lightbox-link'));
+    if (!allLinks.length) return;
+
+    var groups = [];
+    allLinks.forEach(function(link) {
+      var container = link.closest('.gallery, .cert-grid');
+      var group = null;
+      for (var i = 0; i < groups.length; i++) {
+        if (groups[i].container === container) { group = groups[i]; break; }
+      }
+      if (!group) { group = { container: container, links: [] }; groups.push(group); }
+      group.links.push(link);
+    });
+
+    var lightbox = document.getElementById('lightbox');
+    var imgEl = document.getElementById('lightbox-img');
+    var captionEl = document.getElementById('lightbox-caption');
+    var closeBtn = lightbox.querySelector('.lightbox-close');
+    var prevBtn = lightbox.querySelector('.lightbox-prev');
+    var nextBtn = lightbox.querySelector('.lightbox-next');
+    var activeLinks = [];
+    var current = 0;
+
+    function show(index) {
+      current = (index + activeLinks.length) % activeLinks.length;
+      var link = activeLinks[current];
+      var img = link.querySelector('img');
+      imgEl.src = link.getAttribute('href');
+      imgEl.alt = img ? img.alt : '';
+      captionEl.textContent = img ? img.alt : '';
+    }
+
+    function open(links, index) {
+      activeLinks = links;
+      show(index);
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      imgEl.src = '';
+    }
+
+    groups.forEach(function(group) {
+      group.links.forEach(function(link, index) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          open(group.links, index);
+        });
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', function() { show(current - 1); });
+    nextBtn.addEventListener('click', function() { show(current + 1); });
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+  })();
+</script>
+
+</body>
+</html>
